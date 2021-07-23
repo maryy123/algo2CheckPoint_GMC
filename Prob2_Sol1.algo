@@ -1,0 +1,18 @@
+ALGORITHM Duplicated elements //using array
+VAR
+    set1: ARRAY_OF INTEGER[len1]
+    set2: ARRAY_OF INTEGER[len2]
+    i:INTEGER
+    j:INTEGER
+    sum:INTEGER:=0
+BEGIN
+    FOR i FROM 0 TO set1.length-1 STEP 1  DO
+        FOR j FROM 0 TO set2.length-1 STEP 1  DO
+            IF (set1[i] == set2[j]) THEN
+                sum+=set1[i]*2
+            END_IF
+        END_FOR
+    END_FOR
+
+    Write("The sum of duplicated elements :",sum)
+END
